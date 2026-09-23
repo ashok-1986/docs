@@ -1,0 +1,94 @@
+{
+  "projectType": "general",
+  "projectName": "Alchemetryx",
+  "projectDescription": "Alchemetryx brand identity and strategy documentation — covering visual standards, messaging frameworks, ICP definitions, and positioning guidelines for the organisation.",
+  "theme": "willow",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Brand Identity",
+        "groups": [
+          {
+            "group": "Foundation",
+            "pages": [
+              "brand/overview",
+              "brand/mission-vision-values",
+              "brand/brand-story"
+            ]
+          },
+          {
+            "group": "Visual Identity",
+            "pages": [
+              "brand/logo",
+              "brand/color-palette",
+              "brand/typography",
+              "brand/imagery-iconography"
+            ]
+          },
+          {
+            "group": "Voice & Messaging",
+            "pages": [
+              "brand/tone-of-voice",
+              "brand/messaging-framework",
+              "brand/taglines-boilerplate"
+            ]
+          },
+          {
+            "group": "Brand in Use",
+            "pages": [
+              "brand/digital-guidelines",
+              "brand/print-guidelines",
+              "brand/dos-and-donts"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Strategy",
+        "groups": [
+          {
+            "group": "Ideal Customer Profile",
+            "pages": [
+              "strategy/icp-overview",
+              "strategy/icp-segments",
+              "strategy/buyer-personas",
+              "strategy/pain-points-jobs-to-be-done"
+            ]
+          },
+          {
+            "group": "Positioning",
+            "pages": [
+              "strategy/positioning-statement",
+              "strategy/competitive-landscape",
+              "strategy/value-proposition"
+            ]
+          },
+          {
+            "group": "Go-To-Market",
+            "pages": [
+              "strategy/gtm-overview",
+              "strategy/channels-tactics",
+              "strategy/content-pillars"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Brand Foundation — mission, vision, values, and origin story",
+    "Visual Identity System — logo, color palette, typography, and imagery guidelines",
+    "Tone of Voice & Messaging Framework — how Alchemetryx speaks and what it stands for",
+    "Ideal Customer Profile (ICP) — firmographic, demographic, and psychographic definitions",
+    "Buyer Personas — detailed profiles of decision-makers and champions",
+    "Jobs-to-be-Done & Pain Points — customer motivations mapped to solutions",
+    "Competitive Positioning — differentiation narrative and landscape overview",
+    "Value Proposition Canvas — clear articulation of customer value",
+    "Go-To-Market Strategy — channel mix, tactics, and content pillars",
+    "Brand Usage Guidelines — dos & don'ts, digital and print applications"
+  ],
+  "publicApiSurface": []
+}

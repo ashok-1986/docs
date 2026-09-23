@@ -1,0 +1,69 @@
+---
+title: "Alchemetryx Typography System & Type Scale"
+sidebarTitle: "Typography"
+description: "The Alchemetryx typeface choices, type scale, hierarchy rules, and how to apply typography consistently across digital and print applications."
+---
+
+Typography is the voice of the brand in written form. Before a reader processes a single word, the typefaces you choose have already communicated something — about credibility, warmth, modernity, or seriousness. The Alchemetryx type system is built around two typefaces that balance opposing but complementary qualities: a clean, rational sans-serif for the majority of communication, and a warm, authoritative serif for the moments that call for editorial weight. Apply this system consistently and the result is a body of work that feels unmistakably Alchemetryx, regardless of the medium or context.
+
+## Typeface Choices
+
+<CardGroup cols={2}>
+  <Card title="Inter — Primary Typeface" icon="font" href="https://fonts.google.com/specimen/Inter">
+    **Inter** is a sans-serif typeface engineered specifically for high legibility on digital screens. Its open apertures, consistent stroke widths, and extensive weight range make it equally at home in a dense data table and a bold display headline. Inter is the workhorse of the Alchemetryx type system — it carries headings, UI labels, navigation, and all body copy. Available free via Google Fonts at all required weights (Regular 400, Medium 500, SemiBold 600, Bold 700).
+  </Card>
+  <Card title="Playfair Display — Secondary Typeface" icon="italic" href="https://fonts.google.com/specimen/Playfair+Display">
+    **Playfair Display** is a high-contrast serif typeface with roots in 18th-century transitional letterforms. It brings warmth, craft, and editorial authority to moments that benefit from distinction — a hero headline on a landing page, a pull quote in a case study, or a chapter title in a printed report. Use it sparingly. One application of Playfair Display per layout is enough to elevate the design without undermining Inter's rational clarity. Available free via Google Fonts at Bold 700.
+  </Card>
+</CardGroup>
+
+## Type Scale
+
+The type scale below defines every text style used across Alchemetryx digital and print materials. Sizes are specified in pixels for digital reference; in print, use the point equivalents (1px ≈ 0.75pt). Line heights are set generously to support readability across devices and print sizes.
+
+| Style | Size | Line Height | Weight | Typeface |
+|---|---|---|---|---|
+| Display | 72px | 80px | Bold (700) | Inter |
+| H1 | 48px | 56px | Bold (700) | Inter |
+| H2 | 36px | 44px | SemiBold (600) | Inter |
+| H3 | 28px | 36px | SemiBold (600) | Inter |
+| H4 | 22px | 30px | Medium (500) | Inter |
+| Body Large | 18px | 28px | Regular (400) | Inter |
+| Body | 16px | 24px | Regular (400) | Inter |
+| Caption | 13px | 20px | Regular (400) | Inter |
+
+Reserve Display sizing for hero sections and key landing page moments only. Never use Display or H1 styles for body content — their job is to orient the reader and establish the page's primary message, not to narrate it.
+
+## Hierarchy Rules
+
+Good typographic hierarchy is invisible — it guides readers through content without making them aware of the system underlying it. Follow these three rules on every page and layout you produce.
+
+<Steps>
+  <Step title="Establish exactly one H1 per page">
+    Every page or document should contain one, and only one, H1-level heading. The H1 declares the primary subject of the page and carries the most semantic and visual weight. Multiple H1s confuse readers, undermine SEO, and signal a lack of content structure. If a page covers several major topics, reorganise into separate pages or use H2 sections to define the divisions.
+  </Step>
+  <Step title="Never skip heading levels">
+    Heading levels must progress in order: H1 → H2 → H3 → H4. Never jump from an H1 directly to an H3, or from an H2 to an H4, without an intermediate level. Skipping levels creates gaps in the document outline that harm accessibility (screen reader users rely on heading structure to navigate) and undermine the visual rhythm of the layout. If a lower-level style looks better visually, adjust the style — do not skip the structural level.
+  </Step>
+  <Step title="Use Playfair Display sparingly — one instance per layout">
+    Playfair Display earns its impact through restraint. Limit its use to a single application per layout: one hero headline, one pull quote, or one editorial section title. When Playfair Display appears frequently within a single layout, it loses its capacity to signal distinction and instead creates visual noise. Let Inter carry the content; let Playfair Display mark the moment.
+  </Step>
+</Steps>
+
+## Font Loading
+
+Load both typefaces from Google Fonts using the snippet below. Place these `<link>` tags in the `<head>` of your HTML document, before any stylesheet references, to avoid render-blocking delays.
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+```
+
+The `preconnect` hints instruct the browser to establish early connections to the Google Fonts servers before the full request is made, reducing latency for users on slower connections. The `display=swap` parameter ensures body text renders immediately in a fallback font while the custom typefaces load, preventing an invisible flash of unstyled content.
+
+For production applications with strict performance requirements, consider self-hosting the font files and serving them from your own CDN to eliminate the third-party dependency entirely.
+
+<Tip>
+  Set the base body font-size to 16px and use `rem` units throughout the full type scale to maintain accessibility across all devices. This approach respects the user's browser font-size preferences — if a user has set their browser default to 20px for accessibility reasons, the entire scale adjusts proportionally rather than overriding their settings with fixed pixel values.
+</Tip>

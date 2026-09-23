@@ -1,0 +1,81 @@
+---
+title: "Alchemetryx Colour Palette & Usage Guide"
+sidebarTitle: "Colour Palette"
+description: "The complete Alchemetryx colour system — primary, secondary, and neutral tones with hex codes, usage rules, and accessibility contrast guidance."
+---
+
+Colour is the most immediate visual expression of who Alchemetryx is. The palette is not an arbitrary collection of attractive tones — each colour was chosen to carry a specific dimension of the brand's character. The vibrant orange communicates energy and transformation. The soft peach makes the brand feel human and approachable. The clarity teal signals depth, intelligence, and trust. Together, these colours create a system that is distinctive, versatile, and rooted in purpose. Use them consistently and intentionally across every touchpoint.
+
+## Primary Palette
+
+The Alchemetryx colour system comprises five values spanning from a near-black neutral through to a warm off-white, anchored by three expressive brand tones. Every approved colour application draws from this set exclusively.
+
+| Colour Name | Role | Hex | RGB | Use |
+|---|---|---|---|---|
+| Alchemetryx Orange | Primary | `#ef7025` | 239, 112, 37 | CTAs, highlights, primary buttons |
+| Warm Peach | Light Accent | `#eec9bc` | 238, 201, 188 | Backgrounds, soft highlights |
+| Clarity Teal | Dark Accent | `#4fa1ab` | 79, 161, 171 | Links, icons, secondary buttons |
+| Deep Navy | Neutral Dark | `#1a1a2e` | 26, 26, 46 | Body text, dark backgrounds |
+| Off-White | Neutral Light | `#f9f5f0` | 249, 245, 240 | Page backgrounds, cards |
+
+## Colour Roles
+
+Understanding the role each colour plays prevents the palette from being used arbitrarily and ensures every interface or document feels coherent.
+
+**Alchemetryx Orange** is the primary brand colour and carries the highest visual weight. It belongs on the elements that demand the most attention — call-to-action buttons, key data highlights, active navigation states, and brand moments where you want to signal energy or transformation. Use it boldly, but not everywhere: when everything is orange, nothing is.
+
+**Warm Peach** is a softening accent designed for backgrounds, section dividers, and subtle highlights. It introduces warmth without dominating the composition. It pairs naturally with Deep Navy text to create a welcoming, readable surface.
+
+**Clarity Teal** plays the role of the thoughtful counterpart to orange. It is the colour of information, navigation, and supporting actions — links, secondary buttons, informational icons, and data visualisation accents. Where orange shouts, teal explains.
+
+**Deep Navy** is the primary text and dark-surface colour. It replaces pure black throughout the system, providing sufficient contrast without the harshness of #000000. Use it for all body copy, labels, and dark-themed backgrounds.
+
+**Off-White** serves as the default page and card background across light interfaces. It is warmer and more human than pure white, subtly reinforcing the approachability of the brand without drawing attention to itself.
+
+## Accessibility
+
+<Warning>
+  Always ensure sufficient contrast ratio. Alchemetryx Orange (#ef7025) on white achieves a contrast ratio of approximately 3.1:1 — use it for large text (18px+ regular or 14px+ bold) and graphic UI elements only, where WCAG AA permits lower ratios. Never use Alchemetryx Orange for small body copy on white backgrounds. Pair Deep Navy (#1a1a2e) with Off-White (#f9f5f0) for all body text to comfortably exceed WCAG AA at a contrast ratio above 14:1.
+</Warning>
+
+The table below summarises the approved and not-approved colour pairings from an accessibility standpoint. Before introducing any new colour combination, verify the contrast ratio using a tool such as the WebAIM Contrast Checker.
+
+| Foreground | Background | Contrast Ratio | WCAG AA (Normal Text) | WCAG AA (Large Text / UI) |
+|---|---|---|---|---|
+| Deep Navy `#1a1a2e` | Off-White `#f9f5f0` | ~14.5:1 | ✅ Pass | ✅ Pass |
+| Deep Navy `#1a1a2e` | Warm Peach `#eec9bc` | ~8.3:1 | ✅ Pass | ✅ Pass |
+| Off-White `#f9f5f0` | Deep Navy `#1a1a2e` | ~14.5:1 | ✅ Pass | ✅ Pass |
+| Off-White `#f9f5f0` | Alchemetryx Orange `#ef7025` | ~2.9:1 | ❌ Fail | ✅ Pass |
+| Alchemetryx Orange `#ef7025` | Off-White `#f9f5f0` | ~3.1:1 | ❌ Fail | ✅ Pass |
+| Clarity Teal `#4fa1ab` | Off-White `#f9f5f0` | ~3.5:1 | ❌ Fail | ✅ Pass |
+| Off-White `#f9f5f0` | Clarity Teal `#4fa1ab` | ~3.5:1 | ❌ Fail | ✅ Pass |
+| Deep Navy `#1a1a2e` | Clarity Teal `#4fa1ab` | ~4.2:1 | ✅ Pass | ✅ Pass |
+
+## Colour in Context
+
+The way you specify colour values depends on the production medium. Using the wrong colour space introduces drift — the teal that looks precise on screen can look murky or shifted in print if the values are not translated correctly.
+
+<Tabs>
+  <Tab title="Digital">
+    For all digital applications — websites, apps, digital documents, social graphics, and presentations — specify colour using **HEX** or **RGB** values as listed in the primary palette table above. These values are calibrated for the sRGB colour space, which is the standard for web and screen display.
+
+    When working in design tools such as Figma or Sketch, ensure your document colour profile is set to **sRGB**. Avoid using P3 or Adobe RGB profiles for brand assets intended for web use, as colours will appear over-saturated on standard monitors and shift unexpectedly on export.
+
+    Use HEX codes in CSS and design tokens. Define the full palette as design tokens or CSS custom properties at the start of every project to ensure consistency across components.
+  </Tab>
+  <Tab title="Print">
+    For all print production, convert colours to **CMYK** before supplying files to a vendor. The HEX values in the palette are defined for screen and must be manually converted — do not rely on automatic RGB-to-CMYK conversion in your design tool, as the default profiles often produce inaccurate results.
+
+    Use the verified CMYK equivalents below as your standard for all print production:
+
+    | Colour Name | Hex | CMYK |
+    |---|---|---|
+    | Alchemetryx Orange | `#ef7025` | C0 M58 Y90 K0 |
+    | Warm Peach | `#eec9bc` | C0 M18 Y18 K0 |
+    | Clarity Teal | `#4fa1ab` | C54 M5 Y0 K33 |
+    | Deep Navy | `#1a1a2e` | C44 M44 Y0 K82 |
+    | Off-White | `#f9f5f0` | C0 M2 Y4 K2 |
+
+    Always request a physical or digital proof from your print vendor before approving a full print run. Colour appearance varies between paper stocks, coatings, and printing methods.
+  </Tab>
+</Tabs>
